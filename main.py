@@ -19,7 +19,7 @@ def index():
 def run_flask():
     app.run(host='0.0.0.0', port=8000)
 
-@dp.message(command=["start"])
+@dp.message(CommandStart())
 async def cmd_start(message: types.Message):
     await message.answer("Привет! Я бот знакомств.")
 
